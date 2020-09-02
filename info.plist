@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>de.honma.zipinfo</string>
+	<key>connections</key>
+	<dict>
+		<key>24733700-4082-4D73-81DC-5AF2CC654D65</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>56569D55-41EC-4154-8314-65A0E77D3B3C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Tamio Honma</string>
+	<key>description</key>
+	<string>Shows the contents of a ZIP archive</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>ZIP Info</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>/usr/bin/zipinfo "{query}"</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.terminalcommand</string>
+			<key>uid</key>
+			<string>56569D55-41EC-4154-8314-65A0E77D3B3C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<false/>
+				<key>filetypes</key>
+				<array>
+					<string>public.zip-archive</string>
+				</array>
+				<key>name</key>
+				<string>ZIP Info</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>24733700-4082-4D73-81DC-5AF2CC654D65</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Shows the contents of an ZIP archive</string>
+	<key>uidata</key>
+	<dict>
+		<key>24733700-4082-4D73-81DC-5AF2CC654D65</key>
+		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+		<key>56569D55-41EC-4154-8314-65A0E77D3B3C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>285</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.0</string>
+	<key>webaddress</key>
+	<string>https://www.honma.de</string>
+</dict>
+</plist>
