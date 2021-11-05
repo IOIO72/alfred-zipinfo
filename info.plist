@@ -4,13 +4,28 @@
 <dict>
 	<key>bundleid</key>
 	<string>de.honma.zipinfo</string>
+	<key>category</key>
+	<string>Tools</string>
 	<key>connections</key>
 	<dict>
+		<key>01EC913E-DC85-449C-AFAD-04FA61F52A03</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FA608583-2700-4E89-8735-EF3A5C2303B8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>24733700-4082-4D73-81DC-5AF2CC654D65</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>56569D55-41EC-4154-8314-65A0E77D3B3C</string>
+				<string>01EC913E-DC85-449C-AFAD-04FA61F52A03</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -33,23 +48,31 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
 				<key>escaping</key>
-				<integer>68</integer>
+				<integer>102</integer>
 				<key>script</key>
-				<string>/usr/bin/zipinfo "{query}"</string>
+				<string>/usr/bin/zipinfo -2 "{query}" | (head -n ${headRows}; echo "${divider}"; tail -n ${tailRows})</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.terminalcommand</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>56569D55-41EC-4154-8314-65A0E77D3B3C</string>
+			<string>01EC913E-DC85-449C-AFAD-04FA61F52A03</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>acceptsmulti</key>
-				<false/>
+				<integer>0</integer>
 				<key>filetypes</key>
 				<array>
 					<string>public.zip-archive</string>
@@ -64,30 +87,75 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alignment</key>
+				<integer>0</integer>
+				<key>backgroundcolor</key>
+				<string></string>
+				<key>fadespeed</key>
+				<integer>0</integer>
+				<key>fillmode</key>
+				<integer>2</integer>
+				<key>font</key>
+				<string>Courier New</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>largetypetext</key>
+				<string>{query}</string>
+				<key>textcolor</key>
+				<string></string>
+				<key>wrapat</key>
+				<integer>120</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.largetype</string>
+			<key>uid</key>
+			<string>FA608583-2700-4E89-8735-EF3A5C2303B8</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>Shows the contents of an ZIP archive</string>
 	<key>uidata</key>
 	<dict>
+		<key>01EC913E-DC85-449C-AFAD-04FA61F52A03</key>
+		<dict>
+			<key>xpos</key>
+			<integer>240</integer>
+			<key>ypos</key>
+			<integer>40</integer>
+		</dict>
 		<key>24733700-4082-4D73-81DC-5AF2CC654D65</key>
 		<dict>
 			<key>xpos</key>
-			<integer>50</integer>
+			<integer>30</integer>
 			<key>ypos</key>
-			<integer>50</integer>
+			<integer>40</integer>
 		</dict>
-		<key>56569D55-41EC-4154-8314-65A0E77D3B3C</key>
+		<key>FA608583-2700-4E89-8735-EF3A5C2303B8</key>
 		<dict>
 			<key>xpos</key>
-			<integer>285</integer>
+			<integer>455</integer>
 			<key>ypos</key>
-			<integer>50</integer>
+			<integer>40</integer>
 		</dict>
+	</dict>
+	<key>variables</key>
+	<dict>
+		<key>divider</key>
+		<string>--------------------------------------------------</string>
+		<key>headRows</key>
+		<string>25</string>
+		<key>tailRows</key>
+		<string>5</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.0</string>
+	<string>1.2</string>
 	<key>webaddress</key>
 	<string>https://www.honma.de</string>
 </dict>
